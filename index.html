@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <title>Bookmark</title>
+    <link rel="icon" type="image/x-icon"
+        href="img/top-view-bookmarks-notebook.jpg">
+</head>
+
+<body>
+
+    <section class="bookmarker py-5 my-5">
+        <div class="container d-flex justify-content-center align-items-center flex-column ">
+            <h1 class="position-relative">Bookmarker</h1>
+            <hr class="">
+            <div class="main-div w-100  d-flex justify-content-center align-items-center flex-column ">
+                <h2 class="text-center "><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+                <form id="form" class="w-100 gap-3 d-flex justify-content-center align-items-center flex-column">
+                    <div class="d-flex w-100 flex-column justify-content-center">
+                        <label for="userbookmarkName" class="form-label pb-1 fw-semibold"><i
+                                class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                        <input type="text" class="form-control" id="userbookmarkName" placeholder="Bookmark Name"
+                            oninput="bookNameValidation()">
+                    </div>
+
+                    <div class="d-flex w-100 flex-column justify-content-center">
+                        <label for="userWebsiteUrl" class="form-label pb-1 fw-semibold"><i class="fa-solid fa-link"></i>
+                            Site URL</label>
+                        <input type="url" class="form-control" id="userWebsiteUrl" placeholder="Website URL"
+                            oninput="urlValidation()">
+                    </div>
+
+                    <button onclick="addUser()" type="button" class="btn text-center px-4 d-flex m-auto px-5 py-1 ">
+                        submit
+                    </button>
+                </form>
+            </div>
+            <hr>
+            <div class="col-10 " id="dataRow">
+
+            </div>
+        </div>
+    </section>
+    <script src=" ./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
